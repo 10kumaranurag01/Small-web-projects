@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --heading-color: #9f86c0;
+  --song-color: #be95c4;
+  --artist-color: #e0b1cb;
+  --conatiner-bg-color: #231942;
+  --body-bg-color: #5e548e;
+}
+
+html,
+body {
+  font-family: "lato", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--body-bg-color);
+  background-image: url(../assets/subtle-stripes.png);
+}
+
+.container {
+  height: 29rem;
+  width: 17.5rem;
+  background-color: var(--conatiner-bg-color);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 4rem;
+  border-radius: 15px;
+  box-shadow: 0px 0px 65px 20px black;
+}
+
+.title {
+  color: var(--heading-color);
+}
+
+.track-details {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.track-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--song-color);
+}
+
+.track-artist {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--artist-color);
+}
+
+.track-title,
+.track-artist {
+  text-align: center;
+}
