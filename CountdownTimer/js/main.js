@@ -49,11 +49,8 @@ endDateElement.innerText = endDate;
 
 function updateTimer() {
     const end = new Date(endDate).getTime();
-    console.log(end);
     let dateDotNowinIST = Date.now() + 19800000;
-    console.log(dateDotNowinIST);
     let timeLeft = end - dateDotNowinIST;
-    console.log(timeLeft);
 
     getTimeInFormat(timeLeft);
 
