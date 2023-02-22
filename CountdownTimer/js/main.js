@@ -1,3 +1,4 @@
+// DOM elements
 const daysElement = document.querySelector('.days');
 const hoursElement = document.querySelector('.hours');
 const minutesElement = document.querySelector('.minutes');
@@ -29,10 +30,16 @@ function getTimeInFormat(differenceInTime) {
     let differenceInSeconds = (differenceInMinutes - minutes) * 60;
     let seconds = Math.floor(differenceInSeconds);
 
+    //adding extra '0' at the start of hr, min & seconds
+    let formattedHours = hours.toString().padStart(2, '0');
+    let formattedMinutes = minutes.toString().padStart(2, '0');
+    let formattedSeconds = seconds.toString().padStart(2, '0');
+
+    //updating the values in html
     daysElement.innerHTML = days;
-    hoursElement.innerHTML = hours;
-    minutesElement.innerHTML = minutes;
-    secondsElement.innerHTML = seconds;
+    hoursElement.innerHTML = formattedHours;
+    minutesElement.innerHTML = formattedMinutes;
+    secondsElement.innerHTML = formattedSeconds;
 }
 
 
@@ -49,7 +56,7 @@ endDateElement.innerText = endDate;
 
 function updateTimer() {
     const end = new Date(endDate).getTime();
-    let dateDotNowinIST = Date.now() + 19800000;
+    let dateDotNowinIST = Date.now() + 19800000; // Multiplied 19800000 bcz IST is 5 hours 30minutes than UCT timezone 
     let timeLeft = end - dateDotNowinIST;
 
     getTimeInFormat(timeLeft);
