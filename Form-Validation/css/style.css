@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 13px;
+  font-family: "lato", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --BG-COLOR: #333533;
+  --FORM-BG-COLOR: #202020;
+  --HEADING-COLOR: #ffee32;
+  --FONT-COLOR: #ffd100;
+  --BTN-COLOR: #d6d6d6;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--BG-COLOR);
+  background-image: url(../assets/food.png);
+}
+
+#form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--FORM-BG-COLOR);
+  padding: 3rem;
+  height: 45rem;
+  border-radius: 15px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--HEADING-COLOR);
+}
+
+.row {
+  display: grid;
+  font-size: 1.2rem;
+  width: 24rem;
+  height: 6.6rem;
+  margin-bottom: 2rem;
+  color: var(--FONT-COLOR);
+}
+
+.row input {
+  border: none;
+  outline: none;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border: 2px solid #dfd8d8;
+}
+
+.row.success input {
+  border-color: rgb(8, 236, 8);
+}
+
+.row.error input {
+  border-color: rgb(255, 0, 0);
+}
+
+.row input:focus {
+  border-color: var(--FONT-COLOR);
+}
+
+.row small {
+  visibility: hidden;
+}
+
+.row.error small {
+  text-align: center;
+  color: red;
+  letter-spacing: 1px;
+  visibility: visible;
+}
+
+#btn {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.4rem;
+  background-color: var(--BTN-COLOR);
+  color: var(--FORM-BG-COLOR);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#btn:hover {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+.tNc {
+  display: flex;
+  width: 24rem;
+  font-size: 1.1rem;
+  color: var(--FONT-COLOR);
+}
+#terms {
+  margin-right: 1rem;
+}
